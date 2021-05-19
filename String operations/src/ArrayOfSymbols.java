@@ -52,11 +52,24 @@ public class ArrayOfSymbols {
     }
 
     private void task1(){
-        String po = "[A-Z]";
-        String phrase = "camelCase".replaceAll(po, po);
+        String text = " ";
+        String oneSymbol = null;
+        String phrase = "camelCaseOop";
+        char [] arrayForReplace = phrase.toCharArray();
+        for (int i = 0; i < arrayForReplace.length; i++){
+            if (arrayForReplace[i] == Character.toUpperCase(arrayForReplace[i])){
+                arrayForReplace[i] = Character.toLowerCase(arrayForReplace[i]);
+                oneSymbol = "_" + arrayForReplace[i];
+                text += oneSymbol;
+            } else {
+                oneSymbol = String.valueOf(arrayForReplace[i]);
+                text += oneSymbol;
+            }
 
-        System.out.println(phrase);
-//TODO
+        }
+
+        System.out.println(text.trim());
+
     }
 
     public static void main(String[] args) {
