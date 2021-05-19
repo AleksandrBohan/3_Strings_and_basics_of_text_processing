@@ -3,6 +3,21 @@ import java.util.regex.Pattern;
 
 public class ArrayOfSymbols {
 
+    private void task5(){
+        int count = 0;
+        String lineWithNumbers = "           " +
+                "jns798988ivn      2796868          87657645  " +
+                " 3ridokdsj 96bk             dmklkd              ";
+        String delete = lineWithNumbers.trim();
+        String template = "\\s+";
+        Pattern pattern = Pattern.compile("\\s+");
+        Matcher matcher = pattern.matcher(lineWithNumbers);
+        String replaceWrongSpaces = delete.replaceAll("\\s+", " ");
+
+        System.out.println("Line before: " + lineWithNumbers);
+        System.out.println("Line after: " + replaceWrongSpaces);
+    }
+
     private void task4(){
         int count = 0;
         String lineWithNumbers = "jns798988ivn 2796868 87657645 3ridokdsj 96bk dmklkd";
@@ -50,5 +65,6 @@ public class ArrayOfSymbols {
         arrayOfSymbols.task2();
         arrayOfSymbols.task3();
         arrayOfSymbols.task4();
+        arrayOfSymbols.task5();
     }
 }
