@@ -4,6 +4,37 @@ import java.util.regex.Pattern;
 
 public class LineAsAnObject {
 
+    private void task8(String str){
+        int wordCount = 0;
+        int count = 0;
+        for (int i = 0; i < str.length(); i++){
+            String [] arrayForWords = new String[str.length()];
+            String wordLong = new String();
+            while (String.valueOf(str.charAt(i)) != " "){
+                count++;
+            }
+
+            if (String.valueOf(str.charAt(i)) == " "){
+                wordCount++;
+                i++;
+                count = 0;
+                while (String.valueOf(str.charAt(i)) != " ") {
+                    i++;
+                    count++;
+                }
+            }
+
+            for (int k = i-(count-1); k < count; k++){
+                wordLong += String.valueOf(str.charAt(k));
+               // System.out.print(str.charAt(k));
+            }
+            arrayForWords[wordCount] = wordLong;
+            System.out.println(wordLong);
+
+            }
+
+    }
+
     private void task7(String str){
 for (int i =0; i < str.length(); i++)
     for (int j = i+1; j< str.length(); j++){
@@ -127,5 +158,6 @@ private void task1(){
         lineAsAnObject.task5("aaabjkkjjkaakkjkaa");
         lineAsAnObject.task6("abcdefjkl;");
         lineAsAnObject.task7("a dda aa sdeddd dddd q q q");
+        lineAsAnObject.task8("a dda aa sdeddd dddd q q q");
     }
 }
