@@ -4,7 +4,20 @@ import java.util.regex.Pattern;
 
 public class LineAsAnObject {
 
-
+private void task3(String word){
+    int count = 0;
+    int endNumber = word.length()-1;
+    char [] splitWord = word.toCharArray();
+    for (int i = 0; i < word.length(); i++){
+        if (splitWord[i] == splitWord[endNumber]){
+            count++;
+            endNumber--;
+        }
+    }
+    if (count == word.length()){
+        System.out.println(word + " is word-palindrome!!");
+    }
+}
 
 
     private void task2(){
@@ -54,5 +67,6 @@ private void task1(){
         LineAsAnObject lineAsAnObject = new LineAsAnObject();
         lineAsAnObject.task1();
         lineAsAnObject.task2();
+        lineAsAnObject.task3("505");
     }
 }
