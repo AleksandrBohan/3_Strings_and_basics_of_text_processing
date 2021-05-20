@@ -4,12 +4,24 @@ import java.util.regex.Pattern;
 
 public class LineAsAnObject {
 
+    private void task5(String str){
+        int count = 0;
+        String strForEquals = "a";
+
+        for (int i = 0; i < str.length(); i++){
+            if (str.charAt(i) == strForEquals.charAt(0)){
+                count++;
+            }
+        }
+        System.out.println("Letter a repeats in this str " + count + " times!!");
+
+    }
+
     private void task4(){
         String str = "информатика";
         String strForEquals = "торт";
         String concatStr = " ";
 
-        char [] literals = str.toCharArray();
         for (int i = 0; i < strForEquals.length(); i++){
             for (int j = 0; j < str.length(); j++){
                 if (str.charAt(j) == strForEquals.charAt(i)){
@@ -86,5 +98,6 @@ private void task1(){
         lineAsAnObject.task2();
         lineAsAnObject.task3("505");
         lineAsAnObject.task4();
+        lineAsAnObject.task5("aaabjkkjjkaakkjkaa");
     }
 }
