@@ -4,6 +4,20 @@ import java.util.regex.Pattern;
 
 public class LineAsAnObject {
 
+    private void task10(String str){
+        int count = 0;
+        String punctuation = "?.!";
+       for (int i = 0; i < str.length(); i++){
+           if (str.charAt(i) == punctuation.charAt(0) |
+                   str.charAt(i) == punctuation.charAt(1) |
+                   str.charAt(i) == punctuation.charAt(2)){
+               count++;
+           }
+       }
+
+        System.out.println("Count of sentences = " + count);
+    }
+
     private void task9(String str){
             int countForLow = 0;
             int countForHight = 0;
@@ -177,5 +191,6 @@ private void task1(){
         lineAsAnObject.task7("a dda aa sdeddd dddd q q q");
    //     lineAsAnObject.task8("a dda aa sdeddd dddd q q q");
         lineAsAnObject.task9("A ddS aa sdeddd dddD q q q");
+        lineAsAnObject.task10("A. d?dS aa sdeddd? dddD q q! q");
     }
 }
