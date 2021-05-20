@@ -4,6 +4,23 @@ import java.util.regex.Pattern;
 
 public class LineAsAnObject {
 
+    private void task4(){
+        String str = "информатика";
+        String strForEquals = "торт";
+        String concatStr = " ";
+
+        char [] literals = str.toCharArray();
+        for (int i = 0; i < strForEquals.length(); i++){
+            for (int j = 0; j < str.length(); j++){
+                if (str.charAt(j) == strForEquals.charAt(i)){
+                    concatStr += str.charAt(j);
+                }
+            }
+        }
+        System.out.println(concatStr.trim());
+
+    }
+
 private void task3(String word){
     int count = 0;
     int endNumber = word.length()-1;
@@ -68,5 +85,6 @@ private void task1(){
         lineAsAnObject.task1();
         lineAsAnObject.task2();
         lineAsAnObject.task3("505");
+        lineAsAnObject.task4();
     }
 }
