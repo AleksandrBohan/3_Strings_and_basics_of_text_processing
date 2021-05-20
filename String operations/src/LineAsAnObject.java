@@ -4,6 +4,21 @@ import java.util.regex.Pattern;
 
 public class LineAsAnObject {
 
+    private void task7(String str){
+for (int i =0; i < str.length(); i++)
+    for (int j = i+1; j< str.length(); j++){
+        if (String.valueOf(str.charAt(i)) == String.valueOf(str.charAt(j))){
+            String s = new String(String.valueOf(str.charAt(j)));
+            s = " ";
+
+        }
+    }
+        str = str.replaceAll(" ", "");
+        System.out.println(str);
+
+        //TODO
+    }
+
     private void task6(String str){
         String strNew = new String();
 
@@ -111,5 +126,6 @@ private void task1(){
         lineAsAnObject.task4();
         lineAsAnObject.task5("aaabjkkjjkaakkjkaa");
         lineAsAnObject.task6("abcdefjkl;");
+        lineAsAnObject.task7("a dda aa sdeddd dddd q q q");
     }
 }
