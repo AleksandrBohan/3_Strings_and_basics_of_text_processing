@@ -4,6 +4,17 @@ import java.util.regex.Pattern;
 
 public class LineAsAnObject {
 
+    private void task6(String str){
+        String strNew = new String();
+
+        for (int i = 0; i < str.length(); i++){
+            strNew  += String.valueOf(str.charAt(i)) + String.valueOf(str.charAt(i));
+
+    }
+
+        System.out.println(strNew);
+    }
+
     private void task5(String str){
         int count = 0;
         String strForEquals = "a";
@@ -99,5 +110,6 @@ private void task1(){
         lineAsAnObject.task3("505");
         lineAsAnObject.task4();
         lineAsAnObject.task5("aaabjkkjjkaakkjkaa");
+        lineAsAnObject.task6("abcdefjkl;");
     }
 }
