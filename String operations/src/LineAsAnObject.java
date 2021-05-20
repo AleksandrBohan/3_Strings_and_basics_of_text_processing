@@ -4,8 +4,35 @@ import java.util.regex.Pattern;
 
 public class LineAsAnObject {
 
-    private void task2(){
 
+
+
+    private void task2(){
+        int count = 0;
+        String lineWithSpaces = "  dffg  a sfg     gf   aa   ghghfhfhgfh";
+        int s = lineWithSpaces.compareTo("a");
+        char [] arrayForConcat = lineWithSpaces.toCharArray();
+        String template = new String("ab");
+        char symbol = template.charAt(0);
+        String template3 = " ";
+        char symbol3 = template.charAt(0);
+        String templateSecond = "ab";
+        char symbolForChange = templateSecond.charAt(0);
+        for (int i = 0; i < arrayForConcat.length; i++){
+            if (arrayForConcat[i] == symbol){
+                for (int j = 0; j < template.length(); j++){
+                    arrayForConcat[i] += templateSecond.charAt(0);
+                    arrayForConcat[i] += templateSecond.charAt(1);
+
+                }
+
+            }
+        }
+
+        String afterChange = String.valueOf(arrayForConcat);
+        System.out.println(afterChange);
+
+        //TODO
     }
 
 private void task1(){
@@ -26,5 +53,6 @@ private void task1(){
     public static void main(String[] args) {
         LineAsAnObject lineAsAnObject = new LineAsAnObject();
         lineAsAnObject.task1();
+        lineAsAnObject.task2();
     }
 }
