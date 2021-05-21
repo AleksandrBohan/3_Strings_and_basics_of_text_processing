@@ -51,7 +51,7 @@ public class WorkWithRegularExpressions {
             countSentences = 0;
         }
         System.out.println(str);*/
-
+//TODO
     }
 
     private void task1(){
@@ -98,7 +98,7 @@ public class WorkWithRegularExpressions {
            // System.out.println(str);
             countSentences = 0;
         }
-
+//TODO
         System.out.println(count);
     }
 
